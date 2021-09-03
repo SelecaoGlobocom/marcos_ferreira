@@ -9,12 +9,12 @@ import com.globo.usecases.ParametersValidationUseCase;
 
 public class ParametersValidationUseCaseTests {
 	
+	private ParametersValidationUseCaseProtocol sut = new ParametersValidationUseCase();
+	
 	@Test
 	public void testParametersValidationUseCase_execute_ShouldReturnSucess() {
-		ParametersValidationUseCaseProtocol sut = new ParametersValidationUseCase();
-		
 		try {
-			String[] args = { "--input-file", "input.txt" };
+			String[] args = { "--input-file", "../resources/input.txt" };
 			boolean result = sut.execute(args);
 			
 			assertEquals(true, result);
@@ -24,8 +24,6 @@ public class ParametersValidationUseCaseTests {
 	
 	@Test
 	public void testParametersValidationUseCase_execute_ShouldTrhowEmptyParametersException() {
-		ParametersValidationUseCaseProtocol sut = new ParametersValidationUseCase();
-		
 		try {
 			String[] args = {};
 			sut.execute(args);
@@ -37,8 +35,6 @@ public class ParametersValidationUseCaseTests {
 	
 	@Test
 	public void testParametersValidationUseCase_execute_ShouldTrhowInputFileParameterException() {
-		ParametersValidationUseCaseProtocol sut = new ParametersValidationUseCase();
-		
 		try {
 			String[] args = { "input-file", "input.txt" };
 			sut.execute(args);
@@ -50,8 +46,6 @@ public class ParametersValidationUseCaseTests {
 	
 	@Test
 	public void testParametersValidationUseCase_execute_ShouldTrhowFileNameParameterException() {
-		ParametersValidationUseCaseProtocol sut = new ParametersValidationUseCase();
-		
 		try {
 			String[] args = { "--input-file", "persons.txt" };
 			sut.execute(args);
