@@ -94,3 +94,32 @@ $ _
 ```
 
 O programa termina quando for digitado fim ou Ctrl+C.
+
+
+# Instruções para execução do desafio
+
+<br/>
+
+- Clonar o repositório
+- Acessar pelo terminal o diretório raiz do projeto
+- Executar os seguintes comandos:
+    - make setup
+    - make challenge INPUT-FILE=${caminho-para-arquivo-de-input}
+- Fornecer os dados para validação do mesmo
+- Pressionar CTRL + C para encerrar
+
+<br/><br/>
+**Notas importantes**
+
+<ul>
+<li>O desafio escolhido foi o da árvore Genealógica.</li>
+
+<li> Foi utilizada a linguagem Java na versão 11.0.2 para o desenvolvimento, certificar que a versão utilizada na máquina para o teste é a mesma.</li>
+
+<li>O nome do arquivo contendo as informações a serem utilizadas no desafio deve **OBRIGATORIAMENTE** ser `input.txt`, caso contrário uma exceção será lançada.</li>
+
+<li>O código foi escrito utilizando a IDE Eclipse na versão: **2021-06 (4.20.0)**</li>
+</ul>
+
+<br/><br/>
+Qualquer dúvida estou a disposição.
